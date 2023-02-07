@@ -8,3 +8,8 @@ spring:
 logging:
   level:
     org.hibernate.type.descriptor.sql: trace
+
+---
+spring:
+  main:
+    allow-bean-definition-overriding: true

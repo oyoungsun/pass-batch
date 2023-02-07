@@ -59,9 +59,9 @@ class PackageRepositoryTest {
         packageEntity2.setPeriod(180);
         packageRepository.save(packageEntity2); //2개 생성
         //when - select time -> order by
-        final List<PackageEntity> packageEntities = packageRepository.findByCreatedAtAfter(dateTime, PageRequest.of(0,1, Sort.by("packageSeq").descending()));
+        final List<PackageEntity> packageEntities = packageRepository.findByCreatedAtAfter(dateTime, PageRequest.of(0,2, Sort.by("packageSeq").ascending()));
         //then
-        assertEquals(1, packageEntities.size()); //현재 이후에 생성된 애들이 들어간다.
+        assertEquals(2, packageEntities.size()); //현재 이후에 생성된 애들이 들어간다.
         //assertEquals(packageEntity1.getPackageSeq(), packageEntities.get(0).getPackageSeq());
         System.out.println(packageEntities.get(0).getPackageName()); //2번쨰 녀석만 선택된다.
 

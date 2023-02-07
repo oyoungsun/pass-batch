@@ -23,7 +23,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
 	implementation 'org.springframework.batch:spring-batch-integration' // AsyncItemProcessor, AsyncItemWriter
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	implementation 'org.projectlombok:lombok:1.18.20'// WebClient
+	implementation 'org.projectlombok:lombok:1.18.20'
+    implementation 'org.mapstruct.extensions.spring:mapstruct-spring-annotations:0.1.1'// WebClient
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor" // @ConfigurationProperties
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
@@ -33,6 +34,10 @@ dependencies {
 	// lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// mapstruct
+	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
 
 	// hibernate-types
 	implementation 'com.vladmihalcea:hibernate-types-52:2.19.2'
@@ -48,6 +53,7 @@ dependencies {
 	testAnnotationProcessor 'org.projectlombok:lombok'
 	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
 	testImplementation 'org.apache.commons:commons-lang3:3.12.0'
+
 
 }
 
