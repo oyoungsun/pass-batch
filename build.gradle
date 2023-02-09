@@ -29,7 +29,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	runtimeOnly 'com.mysql:mysql-connector-j'
-	implementation 'mysql:mysql-connector-java'
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	// lombok
 	compileOnly 'org.projectlombok:lombok'
@@ -41,6 +41,12 @@ dependencies {
 
 	// hibernate-types
 	implementation 'com.vladmihalcea:hibernate-types-52:2.19.2'
+
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+	// csv
+	implementation 'com.opencsv:opencsv:5.7.0'
+
 
 	// #### test ####
 	testImplementation "org.testcontainers:testcontainers:1.17.6"

@@ -60,6 +60,7 @@ public class AddPassesTasklet implements Tasklet {
         List<PassEntity> passEntities = new ArrayList<>();
         for(String userId: userIds){
             PassEntity passEntity = PassModelMapper.INSTANCE.toPassEntity(bulkPassEntity, userId);
+            //
             passEntities.add(passEntity);
         }
         return passRepository.saveAll(passEntities).size();
